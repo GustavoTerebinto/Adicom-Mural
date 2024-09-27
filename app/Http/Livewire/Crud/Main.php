@@ -347,9 +347,19 @@ class Main extends Component
                 'items' => $this->model::where('type','LIKE',"%{$this->userType}%")->paginate($this->paginateAmount)
             ]);
         }else{
-            return view($this->view_name, [
-                 'items' => $this->model::where('name','LIKE',"%{$this->search}%")->orWhere('email','LIKE',"%{$this->search}%")->paginate($this->paginateAmount)
-            ]);
+            http_response_code(500);
+            //Try select title key for the callback (For Orders or Ideas pages)
+            try {
+                return view($this->view_name, [
+                    'items' => $this->model::where('title', 'LIKE', "%{$this->userType}%")->paginate($this->paginateAmount)
+                ]);
+            } 
+            //If get exception by HTTP(500) Error, return select type key for the callback (For Feedback page)
+            catch (\Exception $e) {
+                return view($this->view_name, [
+                    'items' => $this->model::where('id', 'LIKE', "%{$this->userType}%")->paginate($this->paginateAmount)
+                ]);
+            }
         }
     }
 
