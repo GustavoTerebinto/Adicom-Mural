@@ -7,7 +7,8 @@
           <meta name="csrf-token" content="{{ csrf_token()}}">
           <script>window.Laravel = {csrfToken:'{{ csrf_token() }}'}</script>
           <script src="https://unpkg.com/imask"></script>
-          <title>Mural - PRACTICE</title>
+          <title>ADICOM</title>
+          <link rel="icon" type="image/x-icon" href="img/uffs-logo.png">
 
           <meta content="" name="description">
           <meta content="" name="keywords">
