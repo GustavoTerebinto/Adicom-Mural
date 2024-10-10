@@ -287,10 +287,11 @@ section {
   transition: all 0.5s;
   z-index: 3;
   padding: 20px 0;
+  background-color: #00693E;
 }
 
 .header.header-scrolled {
-  background: #fff;
+  background-color: #00693E;
   padding: 15px 0;
   box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
 }
@@ -300,7 +301,7 @@ section {
 }
 
 .header .logo img {
-  max-height: 40px;
+  max-height: 65px;
   margin-right: 6px;
 }
 
@@ -308,7 +309,7 @@ section {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #012970;
+  color: white;
   font-family: "Roboto", sans-serif;
   margin-top: 3px;
 }
@@ -362,7 +363,7 @@ section {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #013289;
+  color: white;
   white-space: nowrap;
   transition: 0.3s;
 }

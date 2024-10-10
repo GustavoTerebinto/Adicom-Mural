@@ -2,8 +2,8 @@
     <div class="container-lg d-flex align-items-center justify-content-between">
 
         <a href="{{ route('index') }}" class="logo d-flex align-items-center">
-            <img src="{{ asset('img/mural-icon.png') }}" alt="">
-            <span>Mural</span>
+            <img src="{{ asset('img/uffs-logo-ext.png') }}" alt="">
+            <span>ADICOM</span>
         </a>
 
         <nav id="navbar" class="navbar oculto">
