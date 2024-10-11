@@ -9,12 +9,12 @@
     <li class="dropdown-item d-flex d-xl-none justify-content-between">
         <div tabindex="0" class="avatar ml-2">
             <div class="rounded-full w-10 h-10 m-1">
-                <img src="https://cc.uffs.edu.br/avatar/iduffs/{{ auth()->user()->uid }}" />
+                <img src="img/icon-user.png" />
             </div>
         </div> 
         <div class="text-right mt-1">
-            <p class="font-semibold">{{ auth()->user()->first_name }}</p>
-            <p class="text-xs font-extralight -mt-1 text-gray-400">{{ auth()->user()->username }}</p>
+            <p class="font-semibold text-white">{{ auth()->user()->first_name }}</p>
+            <p class="text-xs font-extralight -mt-1 text-black">{{ auth()->user()->username }}</p>
         </div>
     </li>
 
@@ -24,12 +24,12 @@
 
     <li class="dropdown ml-8 mr-2 flex flex-row d-none d-xl-flex">
         <div class="text-right mt-1">
-            <p class="font-semibold">{{ auth()->user()->first_name }}</p>
-            <p class="text-xs font-extralight -mt-1 text-gray-400">{{ auth()->user()->username }}</p>
+            <p class="font-semibold text-white">{{ auth()->user()->first_name }}</p>
+            <p class="text-xs font-extralight -mt-1 text-black">{{ auth()->user()->username }}</p>
         </div>
         <div tabindex="0" class="avatar ml-2">
             <div class="rounded-full w-10 h-10 m-1">
-                <img src="https://cc.uffs.edu.br/avatar/iduffs/{{ auth()->user()->uid }}" />
+                <img src="img/icon-user.png" />
             </div>
         </div>  
         <ul class="shadow menu dropdown-content bg-base-100 rounded-box w-52">

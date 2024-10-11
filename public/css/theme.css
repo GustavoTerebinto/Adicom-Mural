@@ -306,7 +306,7 @@ section {
 }
 
 .header .logo span {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 700;
   letter-spacing: 1px;
   color: white;
@@ -375,7 +375,7 @@ section {
 }
 
 .navbar a:hover, .navbar .active, .navbar li:hover > a {
-  color: #4154f1;
+  color: white;
 }
 
 .navbar .dropdown ul {
@@ -388,7 +388,8 @@ section {
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background: #fff;
+  background: #282828;
+  color: white;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
 }
@@ -409,7 +410,7 @@ section {
 }
 
 .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
-  color: #4154f1;
+  color: #0fcf66;
 }
 
 .dropdown-item:hover {
@@ -418,7 +419,7 @@ section {
 
 .navbar .dropdown:hover > ul {
   opacity: 1;
-  top: 100%;
+  top: 110%;
   visibility: visible;
 }
 
