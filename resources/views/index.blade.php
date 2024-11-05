@@ -31,7 +31,7 @@
   </section><!-- End Hero -->
 
   <main id="main">
-    <!-- ======= About Section ======= -->
+    <!-- ======= About Section =======
     <section id="about" class="about">
 
       <div class="container">
@@ -59,10 +59,12 @@
         </div>
       </div>
 
-    </section><!-- End About Section -->
-    @include('components.valores')
-    @include('components.contador')
+    </section>
+    ======= End About Section ======= -->
+    
+    <!-- include('components.valores') -->
+    <!-- include('components.contador') -->
     @include('components.servicos')
-    @include('components.testemunho')
+    <!-- include('components.testemunho') -->
   </main><!-- End #main -->
 @endsection
