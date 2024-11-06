@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-12 text-left">
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-lg-12 text-left">
                             <h4>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none"
@@ -38,7 +38,7 @@
                                 Tambem odiamos spam! Enviamos e-mails interessantes e com baixa frequência.
                             </p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="col-lg-3 pl-16">

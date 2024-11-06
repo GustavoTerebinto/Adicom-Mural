@@ -1,6 +1,6 @@
 @extends('layouts.base')
 @section('content')
-    <section id="hero" class="hero hero-slim d-flex align-items-center h-auto">
+    <section id="hero" class="hero hero-slim d-flex align-items-center h-auto mt-20">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 hero-img">
