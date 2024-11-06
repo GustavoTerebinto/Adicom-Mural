@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\FeedbacksController as AdminFeedbacksController;
 use App\Http\Controllers\Admin\SubscriberController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IdeaController;
@@ -68,6 +69,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/servicos/acompanhar', [OrderController::class, 'index'])->name('order.list');
     Route::get('/servico/{order}', [OrderController::class, 'show'])->name('order.show');
     Route::get('/feedbacks', [FeedbackController::class, 'index'])->name('feedbacks');
+    Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 
     // Admin
     Route::group(['middleware' => 'check.admin'], function () {
