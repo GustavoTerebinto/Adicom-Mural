@@ -5,11 +5,11 @@
     <div class="container mt-15">
         <div class="row">
             <div class="col-5 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                <img src="{{ asset('img/undraw.co/faq.png') }}" class="w-96 h-100 mx-auto" alt="">
+                <img src="{{ asset('img/undraw.co/faq.png') }}" class="" alt="">
             </div>
             <div class="col-7 d-flex flex-column justify-content-center">
                 <h1 data-aos="fade-up">Perguntas frequentes (FAQ)</h1>
-                <h2 data-aos="fade-up" data-aos-delay="400">Local para fazer perguntas e sanar dúvidas sobre o sistema.</h2>
+                <h2 data-aos="fade-up" data-aos-delay="400">Local para fazer perguntas e sanar dúvidas.</h2>
             </div>
         </div>
     </div>

@@ -115,7 +115,7 @@ section {
   letter-spacing: 1px;
   font-weight: 500;
   margin: 0;
-  color: #4154f1;
+  color: #00693E;
   text-transform: uppercase;
 }
 
@@ -125,7 +125,7 @@ section {
   font-size: 38px;
   line-height: 42px;
   font-weight: 300;
-  color: #012970;
+  color: #444444;
 }
 
 @media (max-width: 768px) {
@@ -562,7 +562,7 @@ section.hero-slim {
   margin: 0;
   font-size: 48px;
   font-weight: 300;
-  color: #012970;
+  color: #373737;
 }
 
 .hero h2 {
@@ -579,7 +579,7 @@ section.hero-slim {
   border-radius: 4px;
   transition: 0.5s;
   color: #fff;
-  background: #4154f1;
+  background: #04b86d;
   box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
 }
 
@@ -605,8 +605,8 @@ section.hero-slim {
   padding: 15px 40px;
   border-radius: 4px;
   transition: 0.5s;
-  color: #4154f1;
-  border: 1px solid #4154f1;
+  color: #019256;
+  border: 1px solid #019256;
   box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
 }
 
@@ -628,7 +628,7 @@ section.hero-slim {
 }
 .hero .btn-get-outline:hover{
   color: #fff;
-  background-color: #4154f1;
+  background-color: #12c279;
 }
 
 .hero .hero-img {

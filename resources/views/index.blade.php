@@ -7,7 +7,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center">
-          <h1 data-aos="fade-up">Central de Serviços e Ideias</h1>
+          <h1 data-aos="fade-up">Atendimento DICOM</h1>
           <h2 data-aos="fade-up" data-aos-delay="400">Uma ponte entre você e a construção de uma universidade melhor</h2>
           <div data-aos="fade-up" data-aos-delay="600">
             <div class="text-center text-lg-start">
@@ -15,15 +15,15 @@
                   <span>Solicitar serviço</span>
                   <i class="bi bi-arrow-right-circle"></i>
               </a>
-              <a href="{{ route('ideas') }}" class="btn-get-outline d-inline-flex align-items-center justify-content-center align-self-center">
-                  <span>Ideias</span>
-                  <i class="bi bi-lightbulb"></i>
+              <a href="{{ route('faq') }}" class="btn-get-outline d-inline-flex align-items-center justify-content-center align-self-center">
+                  <span>FAQ</span>
+                  <i class="bi bi-patch-question"></i>
               </a>
             </div>
           </div>
         </div>
         <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-          <img src="{{ asset('assets/img/hero-img.png') }}" class="img-fluid" alt="">
+          <img src="{{ asset('assets/img/hero.png') }}" class="img-fluid" alt="">
         </div>
       </div>
     </div>

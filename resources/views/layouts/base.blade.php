@@ -51,7 +51,7 @@
 
 
         @yield('wideBottomContent')
-        @include('layouts.footer')
+        <!-- @ include('layouts.footer') -->
 
 
         <img id="aura_span" class="d-none" height="45px" width="45px" src="{{ asset('img/aura/aura_icon.png') }}" />
