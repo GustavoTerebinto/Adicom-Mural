@@ -3,23 +3,21 @@
 @section('content')
     <div class="login container row mx-auto my-5 pt-5 align-items-center">
         <div class="login-img col-md-5 pr-lg-5 mb-5 mb-md-0 mt-5">
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center p-3">
                 <a href="{{ route('index') }}">
-                    <img class="img-fluid" src="{{ asset('img/mural-icon.png') }}" alt="Logo do Mural" width="272">
+                    <img class="img-fluid" src="{{ asset('img/uffs-logo.png') }}" alt="Logo do Mural" width="272">
                 </a>
             </div>
-            <h1>Conecte-se ao PRACTICE <b>Mural</b></h1>
-            <p class="font-italic text-muted mb-0">Utilize seu idUFFS para conectar-se e aproveitar tudo que nossa
-                plataforma
-                oferece.</p>
+            <h1>Conecte-se ao <b>Atendimento DICOM</b></h1>
+            <p class="font-italic text-muted mb-0">Utilize seu idUFFS para conectar-se e solicitar serviços.</p>
         </div>
 
-        <form id="loginForm" class="login-form col-md-6 mx-auto form-signin text-center " action="" method="post">
+        <form id="loginForm" class="login-form col-md-6 pt-5 mx-auto form-signin text-center " action="" method="post">
             @csrf
-            <a href="{{ route('index') }}">
+            <!-- <a href="{{ route('index') }}">
                 <img class="mb-5" src="{{ asset('img/logo-practice.png') }}" alt="Logo do Practice" width="272">
-            </a>
-            <h1 class="h4 mb-3 font-weight-normal">Entre com seu idUFFS</h1>
+            </a> -->
+            <h1 class="h4 mb-3 mt-5 font-weight-normal">Entre com seu idUFFS</h1>
             @if ($errors->any())
                 <div class="alert-error text-danger pb-3">
                     @foreach ($errors->all() as $error)

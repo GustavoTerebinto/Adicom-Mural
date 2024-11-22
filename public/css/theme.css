@@ -93,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 b {
-  color: #717ff5;
+  color: #10b981;
   font-weight: 400;
 }
 
@@ -196,7 +196,7 @@ section {
   left: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: #4154f1;
+  background: #00693E;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -210,7 +210,7 @@ section {
 }     /* icon css */
 
 .back-to-top:hover {
-  background: #6776f4;
+  background: #019256;
   color: #fff;
 }
 
@@ -579,7 +579,7 @@ section.hero-slim {
   border-radius: 4px;
   transition: 0.5s;
   color: #fff;
-  background: #04b86d;
+  background: #019256;
   box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
 }
 
@@ -628,7 +628,7 @@ section.hero-slim {
 }
 .hero .btn-get-outline:hover{
   color: #fff;
-  background-color: #12c279;
+  background-color: #004227;
 }
 
 .hero .hero-img {
