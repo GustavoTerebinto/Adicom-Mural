@@ -66,8 +66,8 @@
                     </li>
                     <li class="dropdown-item"><a class="nav-link"
                             href="{{ route('admin.user') }}">Usuários</a></li>
-                    <li class="dropdown-item"><a class="nav-link"
-                            href="{{ route('admin.subscriber') }}">Newsletter</a></li>
+                    <!-- <li class="dropdown-item"><a class="nav-link"
+                            href="{{ route('admin.subscriber') }}">Newsletter</a></li> -->
                 </ul>
             </li>
             @endadmin
