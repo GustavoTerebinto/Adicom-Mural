@@ -15,6 +15,7 @@
             </div>
             <div class="col-lg-3 order-1 order-md-2 col-md-4">
                 @livewire('order.status', ['order' => $order])
+                @livewire('order.urgency', ['order' => $order])
             </div>
         </div>
     </div>
