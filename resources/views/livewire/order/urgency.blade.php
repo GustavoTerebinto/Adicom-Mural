@@ -1,14 +1,14 @@
 <div class="text-gray-600 body-font overflow-hidden">
     <div class="p-4 w-full">
-        <div class="h-full p-6 rounded-lg border-2 border-{{ $order->situation()->color }} flex flex-col relative overflow-hidden">
-            <span class="bg-{{ $order->situation()->color }} text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">
+        <div class="h-full p-6 rounded-lg border-2 border-{{ $order->urgency()->color }} flex flex-col relative overflow-hidden">
+            <span class="bg-{{ $order->urgency()->color }} text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">
                 URGÊNCIA
             </span>
             <div class="text-2xl font-semibold text-gray-900 leading-none flex items-center text-center justify-center mt-4 pb-4 mb-4 border-b border-gray-200">
-                <p>Máxima</p>
+                <p>{{ $order->urgency()->text }}</p>
             </div>
             <p class="flex items-center text-gray-600 mb-1 text-center">
-                Esta demanda possui urgência alta e é necessário concluir ela assim que for possível.
+                {{ $order->urgency()->explanation }}
             </p>
         </div>
     </div>

@@ -10,7 +10,7 @@ class Urgency extends Component
     public Model $order;
 
     protected $listeners = [
-        'order:statusChanged' => 'reload'
+        'order:urgencyChanged' => 'reload'
     ];
 
     public function reload()

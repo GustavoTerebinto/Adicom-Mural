@@ -33,6 +33,7 @@ class Order extends Model
     protected $fillable = [
         'id',
         'status',
+        'urgency',
         'title',
         'wpp_number',
         'description',
@@ -217,6 +218,44 @@ class Order extends Model
             'text' => 'Aguarda análise',
             'explanation' => 'Estamos verificando a viabilidade de execução desse pedido.',
             'color' => 'purple-600',
+        ];
+    }
+
+     /**
+     * Função para retornar o nível de urgência.
+     *
+     * @return stdClass
+     */
+    public function urgency()
+    {
+        if ($this->urgency == 'low') {
+            return (object) [
+                'text' => 'Baixa',
+                'explanation' => 'Esta demanda possui urgência baixa e não há imediata de conclusão.',
+                'color' => 'green-600',
+            ];
+        }
+
+        if ($this->urgency == 'mid') {
+            return (object) [
+                'text' => 'Média',
+                'explanation' => 'Esta demanda possui urgência média e possúi necessidade parcial de conclusão.',
+                'color' => 'yellow-500',
+            ];
+        }
+
+        if ($this->urgency == 'max') {
+            return (object) [
+                'text' => 'Máxima',
+                'explanation' => 'Esta demanda possui urgência alta e é necessário concluir ela assim que for possível. ',
+                'color' => 'red-700',
+            ];
+        }
+
+        return (object) [
+            'text' => 'Sem nível',
+            'explanation' => 'Sem nível de urgência definido pelos administradores',
+            'color' => 'blue-600',
         ];
     }
 

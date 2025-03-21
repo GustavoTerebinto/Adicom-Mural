@@ -42,6 +42,7 @@ class OrderObserver
     public function saved(Order $order)
     {
         $statusChanged = $order->getOriginal('status') !== $order->status;
+        $urgencyChanged = $order->getOriginal('urgency') !== $order->urgency;
         $wasGithubLinkAdded = $order->getOriginal('github_issue_link') !== $order->github_issue_link;
 
         if ($wasGithubLinkAdded) {
@@ -50,6 +51,11 @@ class OrderObserver
         }        
 
         if (!$statusChanged) {
+            return;
+        }
+
+
+        if (!$urgencyChanged) {
             return;
         }
 

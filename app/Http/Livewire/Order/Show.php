@@ -16,16 +16,19 @@ class Show extends Component
     public $files = [];
     public $github_issue_link;
     public $status;
+    public $urgency;
 
     protected $rules = [
         'github_issue_link' => 'present',
         'status' => 'present|in:,todo,doing,review,completed,closed',
+        'urgency' => 'present|in:,low,mid,max',
     ];
 
     public function mount()
     {
         $this->github_issue_link = $this->order->github_issue_link;
         $this->status = $this->order->status;
+        $this->urgency = $this->order->urgency;
     }
 
     public function render()
@@ -41,6 +44,7 @@ class Show extends Component
         $this->order->update([
             'github_issue_link' => $this->github_issue_link,
             'status' => $this->status,
+            'urgency' => $this->urgency,
         ]);
 
 
@@ -52,6 +56,7 @@ class Show extends Component
         }
 
         $this->emit('order:statusChanged');
+        $this->emit('order:urgencyChanged');
     }
 
     public function changeGithubLabel()

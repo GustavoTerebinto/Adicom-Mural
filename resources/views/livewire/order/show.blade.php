@@ -187,9 +187,24 @@
                     <label class="label"><span class="label-text-alt text-red-500">{{ $message }}</span></label>
                 @enderror
 
+                <label for="urgency" class="label">
+                    <span class="label-text">Urgência desse pedido</span>
+                </label>
+                <select wire:model="urgency" name="urgency"
+                    class="select select-bordered w-full @error('urgency') select-error @enderror">
+                    <option value=""> Sem nível</option>
+                    <option value="low">Baixa</option>
+                    <option value="mid">Média</option>
+                    <option value="max">Máxima</option>
+                </select>
+                @error('urgency')
+                    <label class="label"><span class="label-text-alt text-red-500">{{ $message }}</span></label>
+                @enderror
+
                 <button wire:click="save()" class="btn btn-primary w-20 float-right mt-2">Salvar</button>
             </div>
         </div>
+        
     @endadmin
 
     <div class="mb-4 w-full">
