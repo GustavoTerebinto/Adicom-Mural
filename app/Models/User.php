@@ -133,7 +133,15 @@ class User extends Authenticatable implements JWTSubject
     public function orders()
     {
         return $this->hasMany(Order::class);
-    } 
+    }
+    
+    /**
+     * Get all of the user's questions
+     */
+    public function questions()
+    {
+        return $this->hasMany(Faq::class);
+    }
     
     /**
      * List of user communication channels
