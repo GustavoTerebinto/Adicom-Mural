@@ -118,8 +118,11 @@
                             @endif
 
                             <span
+                                class="text-gray-400 text-xs tracking-widest mt-0.5">{{ $order->user->email }}
+                            </span>
+                            <span
                                 class="text-gray-400 text-xs tracking-widest mt-0.5">{{ $order->user->username }}
-                            </span>         
+                            </span>          
                         </span>
                     </span> 
                 @endadmin

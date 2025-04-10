@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\FeedbacksController as AdminFeedbacksController;
 use App\Http\Controllers\Admin\SubscriberController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\LoginController;
+use APP\Http\Controllers\ContactController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\HomeController;
@@ -61,6 +62,10 @@ Route::view('/newsletter/subscribed', 'newsletter.subscribed')->name('newsletter
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+// Email
+Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
 // Rotas autenticadas
 Route::group(['middleware' => 'auth'], function () {
