@@ -8,8 +8,8 @@ use App\Http\Controllers\Admin\FeedbacksController as AdminFeedbacksController;
 use App\Http\Controllers\Admin\SubscriberController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\LoginController;
-use APP\Http\Controllers\ContactController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\FilaController as AdminFilaController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IdeaController;
@@ -78,6 +78,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     // Admin
     Route::group(['middleware' => 'check.admin'], function () {
+        Route::get('/gerenciar/fila', [AdminFilaController::class, 'index'])->name('admin.fila');
         Route::get('/gerenciar/pedidos', [AdminOrderController::class, 'index'])->name('admin.orders');
         Route::get('/gerenciar/feedbacks', [AdminFeedbacksController::class, 'index'])->name('admin.feedbacks');    
         Route::get('/gerenciar/feedbacks/{feedback}', [AdminFeedbacksController::class, 'show'])->name('feedback.show');

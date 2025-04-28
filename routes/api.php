@@ -19,7 +19,7 @@ use Orion\Facades\Orion;
 
 // Gerência de modelos (serviço, pedido, etc)
 Route::group(['as' => 'api.', 'middleware' => 'jwt.practice'], function() {
-    Orion::resource('ideas', 'API\ContactController');
+    Orion::resource('fila', 'API\FilaController');
     Orion::resource('ideas', 'API\IdeaController');
     Orion::resource('faq', 'API\FaqController');
     Orion::resource('feedbacks', 'API\FeedbackController');

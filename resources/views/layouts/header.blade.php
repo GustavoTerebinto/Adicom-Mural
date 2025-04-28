@@ -16,6 +16,9 @@
                             Admin <i class="bi bi-chevron-down"></i></div>
                         <ul class="rounded-box w-52 shadow dropdown-menu bg-base-100 rounded-box w-52">
                             <li class="dropdown-item"><a class="nav-link"
+                                    href="{{ route('admin.fila') }}">Minha Fila</a></li>
+                            <li class="dropdown-item">
+                            <li class="dropdown-item"><a class="nav-link"
                                     href="{{ route('admin.orders') }}">Pedidos</a></li>
                             <li class="dropdown-item">
                             <li class="dropdown-item"><a class="nav-link"

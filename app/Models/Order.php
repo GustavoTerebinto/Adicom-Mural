@@ -45,6 +45,7 @@ class Order extends Model
         'requested_due_date',
         'read_until_comment_id',
         'user_id',
+        'admin_id',
         'location_id',
         'service_id',
     ];

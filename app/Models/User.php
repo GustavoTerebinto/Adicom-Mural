@@ -134,6 +134,15 @@ class User extends Authenticatable implements JWTSubject
     {
         return $this->hasMany(Order::class);
     }
+
+    /**
+     * Get all of the admin's orders
+     */
+
+    public function ordersAdmin()
+    {
+        return $this->hasMany(Order::class, 'admin_id');
+    }
     
     /**
      * Get all of the user's questions
