@@ -36,6 +36,13 @@ class Show extends Component
         return view('livewire.order.show');
     }
 
+    public function alterAdmin()
+    {
+        $this->order->update([
+            'admin_id' => auth()->id(),
+        ]);
+    }
+
     public function save()
     {
         $previousGithubIssueLink = substr($this->order->github_issue_link,0, strlen($this->github_issue_link));

@@ -162,8 +162,15 @@
                         d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 Gerenciamento interno
+                
+                
             </h3>
+
+            <!--Botão para trocar o admin_id da ordem de serviço -->
+            <button wire:click="alterAdmin()" class="btn btn-primary w-30 mb-2 ml-2">Assumir Solicitação</button>
+
             <div class="form-control mb-4 pb-4">
+            
                 <label for="github_issue_link" class="label">
                     <span class="label-text">URL da issue no Github</span>
                 </label>
@@ -190,6 +197,7 @@
                     <label class="label"><span class="label-text-alt text-red-500">{{ $message }}</span></label>
                 @enderror
 
+                
                 <label for="urgency" class="label">
                     <span class="label-text">Urgência desse pedido</span>
                 </label>
@@ -204,7 +212,10 @@
                     <label class="label"><span class="label-text-alt text-red-500">{{ $message }}</span></label>
                 @enderror
 
-                <button wire:click="save()" class="btn btn-primary w-20 float-right mt-2">Salvar</button>
+                <button wire:click="save()" class="btn btn-primary mx-auto w-30 mt-3 ml-15 mr-15">Salvar</button>
+
+                
+
             </div>
         </div>
         
