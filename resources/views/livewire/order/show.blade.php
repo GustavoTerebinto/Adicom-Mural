@@ -162,12 +162,9 @@
                         d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 Gerenciamento interno
-                
-                
+                <!--Botão para trocar o admin_id da ordem de serviço -->
+                <button wire:click="alterAdmin()" class="btn btn-primary w-30 mb-2 ml-2">Assumir Solicitação</button>      
             </h3>
-
-            <!--Botão para trocar o admin_id da ordem de serviço -->
-            <button wire:click="alterAdmin()" class="btn btn-primary w-30 mb-2 ml-2">Assumir Solicitação</button>
 
             <div class="form-control mb-4 pb-4">
             
