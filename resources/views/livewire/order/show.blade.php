@@ -99,7 +99,7 @@
 
                 @admin
                     <span class="inline-flex items-center">
-                        <img alt="blog" src="https://cc.uffs.edu.br/avatar/iduffs/{{ $order->user->username }}"
+                        <img alt="blog" src="{{ asset('img/undraw.co/profile.webp') }}"
                             class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
                         <span class="flex-grow flex flex-col pl-4">
                             <span class="title-font font-medium text-gray-900">{{ $order->user->name }}</span>
