@@ -18,7 +18,7 @@
                 <div class="flex pb-4 comment-view" data-comment-id="{{ $comment['id'] }}">
                     <div class="mr-3">
                         <img class="rounded-full object-cover w-12 h-12 m-1"
-                            src="https://cc.uffs.edu.br/avatar/iduffs/{{ $comment['user']['uid'] }}" alt="" />
+                        src="{{ asset('img/undraw.co/profile.webp') }}" alt="" />
                     </div>
                     <div class="flex-1 relative border rounded-lg px-4 py-2 pb-3 sm:px-6 sm:py-4 leading-relaxed ">
                         <div class="absolute right-2 top-2 d-flex justify-content-end">
@@ -138,7 +138,7 @@
                 <div class="flex-shrink-0 mr-1">
                     <div class="mt-2">
                         <img class="rounded-full object-cover w-14 h-14"
-                            src="https://cc.uffs.edu.br/avatar/iduffs/{{ auth()->user()->uid }}" alt="" />
+                        src="{{ asset('img/undraw.co/profile.webp') }}" alt="" />
                     </div>
                 </div>
                 <div class="flex-1 rounded-lg px-1 py-0 sm:px-6 sm:py-4 leading-relaxed">
