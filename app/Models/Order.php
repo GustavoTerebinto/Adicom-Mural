@@ -38,7 +38,6 @@ class Order extends Model
         'wpp_number',
         'description',
         'data',
-        'github_issue_link',
         'google_drive_in_folder_link',
         'google_drive_out_folder_link',
         'google_drive_folder_link',
@@ -48,6 +47,10 @@ class Order extends Model
         'admin_id',
         'location_id',
         'service_id',
+        'relation_id',
+        'public',
+        'name',
+        'email',
     ];
 
 
@@ -71,22 +74,44 @@ class Order extends Model
     public static $crud = [
         'fields' => [
             'title' => [
-                'label' => 'Título',
-                'placeholder' => 'Ex.: Semana Acadêmica de Física',
+                'label' => 'Assunto',
+                'placeholder' => 'Nome da campanha, evento, projeto',
                 'validation' => 'required|min:5',
             ],
             'description' => [
                 'label' => 'Descrição',
-                'placeholder' => 'Ex.: Preciso de X, Y e Z.',
+                'placeholder' => 'Preencher com todas as informações sobre a divulgação.',
                 'validation' => 'required|min:10',
                 'type' => 'textarea',
                 'show' => 'create,edit'
             ],
+            'public' => [
+                'label' => 'Público-alvo',
+                'placeholder' => 'Preencher com informações que ajudam a definir o público-alvo da divulgação.',
+                'validation' => 'required',
+            ],
+            'name' => [
+                'label' => 'Nome do solicitante',
+                'placeholder' => 'Nome do responsável pelo pedido.',
+                'validation' => 'required|min:10',
+            ],
+            'email' => [
+                'label' => 'Email',
+                'placeholder' => 'Ex.: usuário1@gmail.com',
+                'validation' => 'min:10'
+            ],
             'wpp_number' => [
                 'label' => 'Número de telefone (Whatsapp)',
-                'placeholder' => 'Ex.: (00)90000-0000',
-                'validation' => 'required|min:11',
+                'placeholder' => 'Ex.: (00) 90000-0000',
+                'validation' => 'min:11',
                 'type' => 'tel'
+            ],
+            'relation_id' => [
+                'type' => 'model:App\Models\Relation',
+                'label' => 'Vínculo com a UFFS',
+                'validation' => 'required',
+                'placeholder' => '',
+                'show' => 'create,edit'
             ],
             'location_id' => [
                 'type' => 'model:App\Models\Location',
@@ -95,13 +120,14 @@ class Order extends Model
                 'placeholder' => '',
                 'show' => 'create,edit'
             ],
-            'requested_due_date' => [
-                'type' => 'date',
-                'label' => 'Prazo de entrega sugerido',
-                'help' => 'Quando você gostaria de ter um primeiro material para revisão. Esse tempo deve considerar alguns dias para que nossa equipe possa fazer a análise do pedido. Além disso, essa data é sugestiva e não há garantias que ela será atendida.',
-                'attr' => 'min=' . NOW_PLUS_FEW_DAYS . ' ',
-                'validation' => 'after:' . NOW_PLUS_FEW_DAYS_VALIDATION . ' '
-            ],
+            /** 'requested_due_date' => [
+            *    'type' => 'date',
+            *    'label' => 'Prazo de entrega sugerido',
+            *    'help' => 'Quando você gostaria de ter um primeiro material para revisão. Esse tempo deve considerar alguns dias para que nossa equipe possa fazer a análise do pedido. Além disso, essa data é sugestiva e não há garantias que ela será atendida.',
+            *    'attr' => 'min=' . NOW_PLUS_FEW_DAYS . ' ',
+            *    'validation' => 'after:' . NOW_PLUS_FEW_DAYS_VALIDATION . ' '
+            * ],
+            */
         ]
     ];
 
@@ -232,7 +258,7 @@ class Order extends Model
         if ($this->urgency == 'low') {
             return (object) [
                 'text' => 'Baixa',
-                'explanation' => 'Esta demanda possui urgência baixa e não há imediata de conclusão.',
+                'explanation' => 'Esta demanda possui urgência baixa e não há necessidade imediata de conclusão.',
                 'color' => 'green-600',
             ];
         }

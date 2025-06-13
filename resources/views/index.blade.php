@@ -16,8 +16,8 @@
                   <i class="bi bi-arrow-right-circle"></i>
               </a>
               <a href="{{ route('faq') }}" class="btn-get-outline d-inline-flex align-items-center justify-content-center align-self-center">
-                  <span>FAQ</span>
-                  <i class="bi bi-patch-question"></i>
+                  <span>Pauta</span>
+                  <i class="bi bi-chat-quote-fill"></i>
               </a>
             </div>
           </div>
