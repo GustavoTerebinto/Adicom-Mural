@@ -1,14 +1,14 @@
 <div class="text-gray-600 body-font overflow-hidden">
     <div class="p-4 w-full">
-        <div class="h-full p-6 rounded-lg border-2 border-{{ $order->urgency()->color }} flex flex-col relative overflow-hidden">
-            <span class="bg-{{ $order->urgency()->color }} text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">
+        <div class="h-full p-6 rounded-lg border-2 border-{{ $order->readiness()->color }} flex flex-col relative overflow-hidden">
+            <span class="bg-{{ $order->readiness()->color }} text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">
                 URGÊNCIA
             </span>
             <div class="text-2xl font-semibold text-gray-900 leading-none flex items-center text-center justify-center mt-4 pb-4 mb-4 border-b border-gray-200">
-                <p>{{ $order->urgency()->text }}</p>
+                <p>{{ $order->readiness()->text }}</p>
             </div>
             <p class="flex items-center text-gray-600 mb-1 text-center">
-                {{ $order->urgency()->explanation }}
+                {{ $order->readiness()->explanation }}
             </p>
         </div>
     </div>

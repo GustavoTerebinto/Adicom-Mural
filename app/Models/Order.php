@@ -253,7 +253,7 @@ class Order extends Model
      *
      * @return stdClass
      */
-    public function urgency()
+    public function readiness()
     {
         if ($this->urgency == 'low') {
             return (object) [
