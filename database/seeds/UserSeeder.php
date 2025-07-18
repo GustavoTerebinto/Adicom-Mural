@@ -30,6 +30,16 @@ class UserSeeder extends Seeder
             'uid' => 'fernando.bevilacqua',
             'cpf' => '000',
             'type' => User::ADMIN
-        ]);        
+        ]);
+        
+        User::create([
+            'name' => 'Gustavo Camineiro Terebinto',
+            'email' => 'terebintogustavo@gmail.com',
+            'password' => '$2y$10$K5mGNKnCCzxVd2ax6oaB8ed.WCVVhgoBWuKIf94yJMecAHSzXwJAO',
+            'username' => 'gustavo.terebinto',
+            'uid' => 'gustavo.terebinto',
+            'cpf' => '5897801150',
+            'type' => User::ADMIN
+        ]);
     }
 }

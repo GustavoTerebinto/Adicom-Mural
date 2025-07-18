@@ -13,67 +13,28 @@ class CategorySeeder extends Seeder
     public function run()
     {
         Category::create([
-            'name' => 'Áudio',
-            'slug' => 'audio',
-            'description' => 'Produção ou edição de faixas de áudio com objetivo de anunciar e/ou divulgar algo, fazer uma chamada ou inserir trilha e efeitos sonoros mais elaborados. Também é possível fazer a composição de áudios distintos, como entrevistas e/ou leitura de livros.',            
-            'icon_svg_path' => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />',
-            'color' => 'red-500',
+            'name' => 'Artes e Campanhas',
+            'slug' => 'artescamp',
+            'description' => 'Produção de artes visuais e campanhas de divulgação.',            
+            'icon_svg_path' => '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 11C9.10457 11 10 10.1046 10 9C10 7.89543 9.10457 7 8 7C6.89543 7 6 7.89543 6 9C6 10.1046 6.89543 11 8 11Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M6.56055 21C12.1305 8.89998 16.7605 6.77998 22.0005 14.63" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M18 3H6C3.79086 3 2 4.79086 2 7V17C2 19.2091 3.79086 21 6 21H18C20.2091 21 22 19.2091 22 17V7C22 4.79086 20.2091 3 18 3Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>',
+            'color' => 'green-500',
         ]);
         
         Category::create([
-            'name' => 'Criação de Vídeo',
-            'slug' => 'criaçaovideo',
-            'description' => 'Os vídeos serão criados pelo PRACTICE em um trabalho conjunto com o/a solicitante.',            
-            'icon_svg_path' => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />',
-            'color' => 'yellow-500',
+            'name' => 'Impressão',
+            'slug' => 'impressao',
+            'description' => 'Impressao de materiais em folhas A3 e A4 (impressao externa) ou banners (impressao interna).',            
+            'icon_svg_path' => '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.05078 15C4.98992 15 3.9725 14.5785 3.22235 13.8284C2.47221 13.0782 2.05078 12.0609 2.05078 11C2.05078 9.93913 2.47221 8.92165 3.22235 8.17151C3.9725 7.42136 4.98992 7 6.05078 7H17.9507C19.0116 7 20.029 7.42136 20.7792 8.17151C21.5293 8.92165 21.9507 9.93913 21.9507 11C21.9507 12.0609 21.5293 13.0782 20.7792 13.8284C20.029 14.5785 19.0116 15 17.9507 15" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M7 12V21H17V12" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M17 7V4C17 3.73478 16.8947 3.48038 16.7072 3.29285C16.5196 3.10531 16.2652 3 16 3H8C7.73478 3 7.48044 3.10531 7.29291 3.29285C7.10537 3.48038 7 3.73478 7 4V7" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M18 12H6" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>',
+            'color' => 'green-500',
         ]);
 
         Category::create([
-            'name' => 'Edição de Vídeo',
-            'slug' => 'ediçaovideo',
-            'description' => 'Todo o material necessário deverá ser enviado pelo(a) solicitante. O PRACTICE fará apenas a edição.',            
-            'icon_svg_path' => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />',
-            'color' => 'yellow-500',
+            'name' => 'Materiais de Divulgação',
+            'slug' => 'materiais',
+            'description' => 'Solicitação de materiais para divulgação.',            
+            'icon_svg_path' => '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21.2799 6.40005L11.7399 15.94C10.7899 16.89 7.96987 17.33 7.33987 16.7C6.70987 16.07 7.13987 13.25 8.08987 12.3L17.6399 2.75002C17.8754 2.49308 18.1605 2.28654 18.4781 2.14284C18.7956 1.99914 19.139 1.92124 19.4875 1.9139C19.8359 1.90657 20.1823 1.96991 20.5056 2.10012C20.8289 2.23033 21.1225 2.42473 21.3686 2.67153C21.6147 2.91833 21.8083 3.21243 21.9376 3.53609C22.0669 3.85976 22.1294 4.20626 22.1211 4.55471C22.1128 4.90316 22.0339 5.24635 21.8894 5.5635C21.7448 5.88065 21.5375 6.16524 21.2799 6.40005V6.40005Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M11 4H6C4.93913 4 3.92178 4.42142 3.17163 5.17157C2.42149 5.92172 2 6.93913 2 8V18C2 19.0609 2.42149 20.0783 3.17163 20.8284C3.92178 21.5786 4.93913 22 6 22H17C19.21 22 20 20.2 20 18V13" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>',
+            'color' => 'green-500',
         ]);
 
-        Category::create([
-            'name' => 'Texto',
-            'slug' => 'texto',
-            'description' => 'Quer melhorar seus conteúdos? Os serviços de texto incluem a produção de cartilhas, manuais, panfletos e cartazes.',
-            'icon_svg_path' => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />',
-            'color' => 'pink-400',
-        ]);
-
-        Category::create([
-            'name' => 'Imagem',
-            'slug' => 'imagem',
-            'description' => 'Precisando de design ou identidade visual? Podemos providenciar através dos nossos pacotes de criação de logotipo, símbolo, paletas de cores, marca d’água e padronagem.',            
-            'icon_svg_path' => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />',
-            'color' => 'green-400',
-        ]);
-
-        Category::create([
-            'name' => 'Transmissões Ao Vivo (Lives)',
-            'slug' => 'evento',
-            'description' => 'Auxílio para a realização de eventos virtuais com live e interação do público? Fornecemos as ferramentas e suporte para que isso seja possível.',
-            'icon_svg_path' => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />',
-            'color' => 'blue-500',
-        ]);
-
-        Category::create([
-            'name' => 'Estúdio',
-            'slug' => 'estudio',
-            'description' => 'Temos um estúdio equipado com infraestrutura para ajudar você na realização das suas produções audiovisuais.',            
-            'icon_svg_path' => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />',
-            'color' => 'purple-600',
-        ]);
-
-        Category::create([
-            'name' => 'Software',
-            'slug' => 'software',
-            'description' => 'Podemos ajudar na criação de softwares acadêmicos, como aplicativos para celular ou sites, tanto para divulgar informações quanto para permitir uma melhor interação.',
-            'icon_svg_path' => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />',
-            'color' => 'indigo-500',
-        ]);        
     }
 }

@@ -93,7 +93,7 @@ class Order extends Model
             'name' => [
                 'label' => 'Nome do solicitante',
                 'placeholder' => 'Nome do responsável pelo pedido.',
-                'validation' => 'required|min:10',
+                'validation' => 'required|min:5',
             ],
             'email' => [
                 'label' => 'Email',

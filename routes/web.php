@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\LocationController;
+use App\Http\Controllers\Admin\RelationController;
 use App\Http\Controllers\Admin\ServiceController as AdminServiceController;
 use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 use App\Http\Controllers\Admin\FeedbacksController as AdminFeedbacksController;
@@ -84,6 +85,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/gerenciar/feedbacks/{feedback}', [AdminFeedbacksController::class, 'show'])->name('feedback.show');
         Route::get('/gerenciar/servicos', [AdminServiceController::class, 'index'])->name('admin.service');
         Route::get('/gerenciar/lugares', [LocationController::class, 'index'])->name('admin.location');
+        Route::get('/gerenciar/vinculos', [RelationController::class, 'index'])->name('admin.location'); //adicionar pagina de relations
         Route::get('/gerenciar/categorias', [CategoryController::class, 'index'])->name('admin.category');
         Route::get('/gerenciar/usuarios', [UserController::class, 'index'])->name('admin.user');
         Route::get('/gerenciar/usuarios/download', [UserController::class, 'download'])->name('admin.userDownload');

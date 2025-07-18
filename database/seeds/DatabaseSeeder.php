@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             LocationSeeder::class,
             ServiceSeeder::class,
             IdeaSeeder::class,
+            RelationSeeder::class,
         ]);
     }
 }

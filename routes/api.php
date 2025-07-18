@@ -26,6 +26,7 @@ Route::group(['as' => 'api.', 'middleware' => 'jwt.practice'], function() {
     Orion::resource('orders', 'API\OrderController');
     Orion::resource('categories', 'API\CategoryController');
     Orion::resource('locations', 'API\LocationController');
+    Orion::resource('relations', 'API\RelationController');
     Orion::resource('services', 'API\ServiceController');
     Orion::resource('comments', 'API\CommentController');
 
