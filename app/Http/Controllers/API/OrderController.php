@@ -18,6 +18,7 @@ class OrderController extends BaseApiController
     public function alwaysIncludes(): array
     {
         return [
+            'admin',
             'service.category',
             'comments',
             'comments.user',

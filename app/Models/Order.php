@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\User;
 use App\OrderEvaluation;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Casts\AsArrayObject;
@@ -130,6 +131,24 @@ class Order extends Model
             */
         ]
     ];
+
+    public function findById($id)
+    {
+        $user = User::where('id', $id)->first();
+        
+        if (!$user) {
+            return response()->json(['message' => 'User not found'], 404);
+        }
+        
+        return response()->json($user);
+    }
+
+    public function findAdm($id)
+    {
+        $user = User::where('id', $id)->first();
+        
+        return $user->name;
+    }
 
     /**
      * Get all of the post's comments.

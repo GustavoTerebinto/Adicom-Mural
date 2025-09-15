@@ -116,20 +116,25 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col"></th>
                         <th scope="col">Título</th>
+                        <th scope="col">
+                            <div class="text-center">Prioridade</div>
+                        </th>
+                        <th scope="col">
+                            <div class="text-center">Proprietário</div>
+                        </th>
+                        <th scope="col">
+                            <div class="text-center">Situação</div>
+                        </th>
                         <th scope="col">
                             <div class="text-center">Local</div>
                         </th>
                         <th scope="col">
                             <div class="text-center">Datas</div>
                         </th>
-                        <th scope="col">
+                        <!-- <th scope="col">
                             <div class="text-center">Comentários</div>
-                        </th>
-                        <th scope="col">
-                            <div class="text-center">Situação</div>
-                        </th>
+                        </th> -->
                         <th scope="col">
                             <div class="text-center">Ação</div>
                         </th>
@@ -138,18 +143,38 @@
                 <tbody>
                     @forelse ($orders as $order)
                         <tr>
-                            <td scope="row">
-                                <a href="{{ route('order.show', [$order['id']]) }}" class="btn btn-primary">Ver</a>
-                            </td>
-                            <td class="text-wrap">
+                        <td class="text-wrap">
                                 <div class="flex items-center space-x-3">
                                     <div>
                                         <div class="font-bold">{{ $order['title'] }}</div>
-                                        <div class="text-sm opacity-50">{{ @$order['service']['category']['name'] }}
-                                            > {{ @$order['service']['name'] }}</div>
+                                        <div class="text-sm opacity-50">
+                                            {{ @$order['service']['name'] }} </div>
                                     </div>
                                 </div>
                             </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span
+                                        class="badge badge-outline badge-info badge-md">{{ $order->readiness()->text }}</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <?php
+                                    $id = $order['admin_id'];
+                                    ?>
+                                    {{ $order->findAdm($id) }}
+                                    
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span
+                                        class="badge badge-outline badge-info badge-md">{{ $order->situation()->text }}</span>
+                                </div>
+                            </td>
+
                             <td class="text-align-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-300 inline-block"
                                     fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -181,7 +206,7 @@
                                     </div>
                                 </div>
                             </td>
-                            <td>
+                            <!-- <td>
                                 <div class="d-flex flex-column align-items-center">
                                     <div>
                                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -200,16 +225,11 @@
                                         </div>
                                     @endif
                                 </div>
-                            </td>
+                            </td> -->
+            
                             <td>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <span
-                                        class="badge badge-outline badge-info badge-md">{{ $order->situation()->text }}</span>
-                                </div>
-                            </td>
-                        
-                            <td>
-                                <a data-toggle="tooltip" data-placement="left"  class="btn btn-primary" href="{{ route('order.destroy', [$order['id']]) }}" onclick="return confirm('Deseja excluir esse pedido?')"><i class="bi bi-trash"></i></a>
+                                <a href="{{ route('order.show', [$order['id']]) }}" class="btn btn-primary"><i class="bi bi-box-arrow-in-right"></i></a>
+                                <a data-toggle="tooltip" data-placement="left"  class="btn btn-danger" href="{{ route('order.destroy', [$order['id']]) }}" onclick="return confirm('Deseja excluir esse pedido?')"><i class="bi bi-trash"></i></a>
                             </td>
                         </tr>
                     @empty

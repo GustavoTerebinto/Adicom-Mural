@@ -16,6 +16,7 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('status')->index()->nullable();
+            $table->string('urgency')->index()->nullable();
             $table->string('title');
             $table->text('description');
             $table->string('public');
@@ -30,7 +31,7 @@ class CreateOrdersTable extends Migration
             $table->timestamps();
 
             $table->foreignId('user_id');
-            $table->foreignId('admin_id')->nullable();
+            $table->foreignId('admin_id');
             $table->foreignId('location_id');
             $table->foreignId('relation_id');
             $table->foreignId('service_id');

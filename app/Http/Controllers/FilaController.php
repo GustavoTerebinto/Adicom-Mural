@@ -15,12 +15,7 @@ class FilaController extends Controller
      */
     public function index()
     {
-        $orders = auth()->user()->ordersAdmin()
-                                
-                                //->with('service.category')
-                                //->orderBy('created_at', 'desc')
-                                ->get();
-
+        $orders = auth()->user()->ordersAdmin()->get();
         return view('admin.listad', [
             'orders' => $orders
         ]);
