@@ -15,8 +15,8 @@
                   <span>Solicitar serviço</span>
                   <i class="bi bi-arrow-right-circle"></i>
               </a>
-              <a href="{{ route('faq') }}" class="btn-get-outline d-inline-flex align-items-center justify-content-center align-self-center">
-                  <span>Pauta</span>
+              <a href="{{ route('pautas') }}" class="btn-get-outline d-inline-flex align-items-center justify-content-center align-self-center">
+                  <span>Pautas</span>
                   <i class="bi bi-chat-quote-fill"></i>
               </a>
             </div>

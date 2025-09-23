@@ -27,6 +27,26 @@
                 </div>
             </div>
             @endforeach
+            <!-- Pauta Section -->
+            <div class="col-lg-4 col-md-6" data-aos-delay="200">
+                <div class="flex flex-col border-b-2 border-green-500 shadow-xl drop-shadow-md m-2 p-3 w-full hover:shadow-2xl">
+                    <div class="text-green-500 w-24 self-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            
+                        </svg>
+                    </div>
+                    <div class="mt-1 p-1 text-center" style="min-height: 14rem">
+                        <h3 class="text-green-500 text-center w-full font-semibold text-2xl mb-3">Nome</h3>
+                        <p class="text-md">Descrição</p>
+                    </div>
+                    <div class="p-2 text-center">
+                        <a href="{{ route('pautas') }}" class="text-green-500 font-semibold">
+                            <span>Saiba mais</span> <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>

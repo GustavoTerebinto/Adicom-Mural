@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\SubscriberController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\PautaController;
 use App\Http\Controllers\FilaController as AdminFilaController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\HomeController;
@@ -76,6 +77,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/servico/{order}', [OrderController::class, 'show'])->name('order.show');
     Route::get('/feedbacks', [FeedbackController::class, 'index'])->name('feedbacks');
     Route::get('/faq', [FaqController::class, 'index'])->name('faq');
+    Route::get('/pautas', [PautaController::class, 'index'])->name('pautas');
 
     // Admin
     Route::group(['middleware' => 'check.admin'], function () {
