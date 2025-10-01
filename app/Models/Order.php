@@ -146,6 +146,11 @@ class Order extends Model
     public function findAdm($id)
     {
         $user = User::where('id', $id)->first();
+
+        if (!$user) {
+            $user = User ::where('id', 1)->first();
+            return $user->name;
+        }
         
         return $user->name;
     }

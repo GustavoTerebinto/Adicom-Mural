@@ -7,7 +7,7 @@
     <div class="container mt-15">
         <div class="row">
             <div class="col-5 hero-img">
-                <img src="{{ asset('img/undraw.co/faq.png') }}" class="w-75 h-auto mx-auto" alt="">
+                <img src="{{ asset('img/undraw.co/pauta.png') }}" class="w-75 h-auto mx-auto" alt="">
             </div>
             <div class="col-7 d-flex flex-column justify-content-center">
                 <h1 data-aos="fade-up">Sugestões de Pauta</h1>
@@ -21,7 +21,8 @@
 <section>
     <div class="container">
         <header class="section-header">
-            <h2>Compartilhe sua sugestão</h2>
+            <h2>Compartilhe ideias</h2>
+            <p>Qual sua sugestão?</p>
         </header>
 
         <div class="row">

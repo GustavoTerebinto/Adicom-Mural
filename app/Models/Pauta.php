@@ -72,7 +72,7 @@ class Pauta extends Model
                 'label' => 'Número de telefone (Whatsapp)',
                 'placeholder' => 'Ex.: (00) 90000-0000',
                 'validation' => 'min:11',
-                'type' => 'tel'
+                //'type' => 'tel'
             ],
             'relation_id' => [
                 'type' => 'model:App\Models\Relation',

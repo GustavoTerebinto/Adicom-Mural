@@ -31,7 +31,7 @@ class CreateOrdersTable extends Migration
             $table->timestamps();
 
             $table->foreignId('user_id');
-            $table->foreignId('admin_id');
+            $table->foreignId('admin_id')->nullable();
             $table->foreignId('location_id');
             $table->foreignId('relation_id');
             $table->foreignId('service_id');

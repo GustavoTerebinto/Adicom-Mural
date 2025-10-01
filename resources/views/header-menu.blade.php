@@ -1,7 +1,7 @@
 @auth
     <!-- <li class="dropdown-item"><a href="{{ route('ideas') }}" class="nav-link @if (Route::is('ideas'))  @endif">Ideias</a></li> -->
     <li class="dropdown-item"><a href="{{ route('pautas') }}" class="nav-link @if (Route::is('pautas'))  @endif">Pautas</a></li>
-    <li class="dropdown-item"><a href="{{ route('feedbacks') }}" class="nav-link @if (Route::is('feedbacks')) active @endif">Feedbacks</a></li>
+    <!-- <li class="dropdown-item"><a href="{{ route('feedbacks') }}" class="nav-link @if (Route::is('feedbacks')) active @endif">Feedbacks</a></li> -->
     <li class="dropdown-item"><a href="{{ route('order.list') }}"class="nav-link @if (Route::is('order.list')) active @endif">Acompanhar serviços</a></li>
     <li class="dropdown-item"><a href="{{ route('services') }}" class="nav-link @if (Route::is(['services', 'order.create'])) active @endif">Solicitar serviço</a></li>
 
