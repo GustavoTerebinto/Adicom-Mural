@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Location;
 use App\Models\Order;
 use App\Models\Service;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Livewire\Component;
@@ -16,6 +17,7 @@ class Orders extends Component
     public Collection $categories;
     public Collection $services;
     public Collection $locations;
+    public Collection $users;
     public int $paginationAmount = 50;
     public array $statuses;
     public array $filter = [];
@@ -25,6 +27,7 @@ class Orders extends Component
         $this->categories = Category::all();
         $this->services = Service::with('category')->get();
         $this->locations = Location::all();
+        $this->users = User::all();
         $this->statuses = [
             '*' => 'Qualquer',
             'pending' => 'Aguardando análise',

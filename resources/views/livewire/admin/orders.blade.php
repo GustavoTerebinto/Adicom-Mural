@@ -160,11 +160,28 @@
                             </td>
                             <td>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <?php
-                                    $id = $order['admin_id'];
+
+                                    <?php 
+                                        $id = $order['admin_id'];
+                                        $i_user = $order->findAdm($id); 
                                     ?>
-                                    {{ $order->findAdm($id) }}
+
                                     
+
+                                    <select class="select">
+                                        <option wire:click="update()">
+                                            {{ $i_user }}
+                                        </option>
+                                        @foreach ($users as $user)
+                                            
+                                                @if ($id != $user['id'] && $user['type'] == 'admin')
+                                                <option value="$user['id']">
+                                                    {{ $user['name'] }}
+                                                </option>
+                                                @endif
+
+                                        @endforeach
+                                    </select>
                                     
                                 </div>
                             </td>
