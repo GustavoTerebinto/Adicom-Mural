@@ -254,6 +254,7 @@
                 </svg>
                 Enviados por você
             </h4>
+            
             <div wire:ignore x-data="{ pond: null }" x-init="FilePond.registerPlugin(FilePondPluginImagePreview);
             pond = FilePond.create($refs.input);
             pond.setOptions({
@@ -275,10 +276,11 @@
                 setTimeout(() => {
                     const frame = document.getElementById('inFiles');
                     frame.parentNode.replaceChild(frame.cloneNode(), frame);
-                }, 10000);
+                }, 1);
             }">
                 <input type="file" name="files" x-ref="input">
             </div>
+
             <p class="text-sm text-gray-400 inline-flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">

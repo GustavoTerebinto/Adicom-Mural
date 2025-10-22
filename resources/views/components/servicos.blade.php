@@ -37,7 +37,7 @@
                     </div>
                     <div class="mt-1 p-1 text-center" style="min-height: 14rem">
                         <h3 class="text-green-500 text-center w-full font-semibold text-2xl mb-3">Sugestão de Pauta</h3>
-                        <p class="text-md">Espaço com formulário para fazer a sugestão de temas.</p>
+                        <p class="text-md">Sugestão de pautas institucionais para produção de material jornalístico</p>
                     </div>
                     <div class="p-2 text-center">
                         <a href="{{ route('pautas') }}" class="text-green-500 font-semibold">
