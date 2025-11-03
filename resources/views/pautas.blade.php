@@ -11,7 +11,7 @@
             </div>
             <div class="col-7 d-flex flex-column justify-content-center">
                 <h1 data-aos="fade-up">Sugestões de Pauta</h1>
-                <h2 data-aos="fade-up" data-aos-delay="400">Local para fazer sugestões para pautas.</h2>
+                <h2 data-aos="fade-up" data-aos-delay="400">Sugestão de pautas institucionais para produção de material jornalístico.</h2>
             </div>
         </div>
     </div>

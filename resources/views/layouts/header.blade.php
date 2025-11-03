@@ -19,11 +19,11 @@
                                     href="{{ route('admin.fila') }}">Minha Fila</a></li>
                             <li class="dropdown-item">
                             <li class="dropdown-item"><a class="nav-link"
-                                    href="{{ route('admin.orders') }}">Pedidos</a></li>
+                                    href="{{ route('admin.orders') }}">Pedidos Gerais</a></li>
                             <li class="dropdown-item">
-                            <li class="dropdown-item"><a class="nav-link"
+                            <!-- <li class="dropdown-item"><a class="nav-link"
                                     href="{{ route('admin.feedbacks') }}">Feedbacks</a></li>
-                            <li class="dropdown-item">
+                            <li class="dropdown-item"> -->
                                 <hr />
                             </li>
                             <li class="dropdown-item"><a class="nav-link"
@@ -32,6 +32,9 @@
                                     href="{{ route('admin.category') }}">Categorias</a></li>
                             <li class="dropdown-item"><a class="nav-link"
                                     href="{{ route('admin.location') }}">Locais</a></li>
+                            <li class="dropdown-item">
+                            <li class="dropdown-item"><a class="nav-link"
+                                    href="{{ route('admin.relation') }}">Relações</a></li>
                             <li class="dropdown-item">
                                 <hr />
                             </li>
