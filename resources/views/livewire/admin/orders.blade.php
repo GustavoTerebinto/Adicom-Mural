@@ -171,7 +171,7 @@
                                     <select class="select">
                                         <option wire:click="update()">
                                             {{ $i_user }}
-                                        </option>
+                                        </option wire:click="update()">
                                         @foreach ($users as $user)
                                             
                                                 @if ($id != $user['id'] && $user['type'] == 'admin')

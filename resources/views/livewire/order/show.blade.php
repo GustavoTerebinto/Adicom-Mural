@@ -255,6 +255,23 @@
                 Enviados por você
             </h4>
             
+            <div class="text-center text-lg-start">
+                
+                <a href="https://drive.google.com/drive/u/2/folders/{{ $order->google_drive_in_folder_id }}" class="btn-get-outline d-inline-flex align-items-center justify-content-center align-self-center" target="_blank">
+                    <svg width="24px" height="24px" viewBox="0 -1.5 20 20">
+                        <g transform="translate(-260.000000, -7440.000000)" fill="#019256">
+                        <g transform="translate(56.000000, 160.000000)"> 
+                        <path d="M204,7291.33301 L207.334,7297 L213.516,7286.51582 L210.182,7280.84882 
+                        L204,7291.33301 Z M216.755,7290.79427 L223.422,7290.79427 L217.334,7280 L210.667,7280 
+                        L216.755,7290.79427 Z M208.334,7296.68206 L211.667,7291.77557 L224,7291.77557 
+                        L220.667,7296.68206 L208.334,7296.68206 Z"></path></g></g>
+                    </svg>
+                    <i class="bi bi-caret-right-fill"></i>
+                    <span> Acessar o Drive</span>
+                </a>
+            </div>
+
+            <!--
             <div wire:ignore x-data="{ pond: null }" x-init="FilePond.registerPlugin(FilePondPluginImagePreview);
             pond = FilePond.create($refs.input);
             pond.setOptions({
@@ -280,6 +297,7 @@
             }">
                 <input type="file" name="files" x-ref="input">
             </div>
+            -->
 
             <p class="text-sm text-gray-400 inline-flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
