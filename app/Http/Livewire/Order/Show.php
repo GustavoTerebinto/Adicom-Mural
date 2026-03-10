@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use App\Services\Github;
+use App\Services\GoogleDrive;
 
 class Show extends Component
 {
@@ -40,6 +41,13 @@ class Show extends Component
     {
         $this->order->update([
             'admin_id' => auth()->id(),
+        ]);
+    }
+
+    public function alterName()
+    {
+        $this->order->update([
+            'name' => $this->name,
         ]);
     }
 
@@ -116,6 +124,12 @@ class Show extends Component
     public function saveFiles() {
         foreach ($this->files as $file) {
             $file->storeAs('orders/' . $this->order->id, $file->getClientOriginalName());
+            
+            //$name = '20255#Cartaz1';
+
+            //$file = file_get_contents(public_path('img/order_list/2025_12_31_13t_Kleki.png'));
+
+            //$this->createFile('imagem', $file, $this->order->google_drive_in_folder_id);
         }
 
         ProcessGoogleDriveUploads::dispatch();

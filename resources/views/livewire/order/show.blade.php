@@ -229,22 +229,6 @@
             Arquivos
         </h3>
 
-        @if (!empty($order->google_drive_out_folder_id))
-            <div class="space-y-4">
-                <h4 class="text-md font-semibold text-gray-500 inline-flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block text-gray-300 mr-2" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
-                    </svg>
-                    Criados pela equipe do programa para você
-                </h4>
-                <iframe
-                    src="https://drive.google.com/embeddedfolderview?id={{ $order->google_drive_out_folder_id }}#list"
-                    class="w-full h-64 border-none"></iframe>
-            </div>
-        @endif
-
         <div class="space-y-4">
             <h4 class="text-md font-semibold text-gray-500 inline-flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block text-gray-300 mr-2" fill="none"
@@ -254,24 +238,8 @@
                 </svg>
                 Enviados por você
             </h4>
-            
-            <div class="text-center text-lg-start">
-                
-                <a href="https://drive.google.com/drive/u/2/folders/{{ $order->google_drive_in_folder_id }}" class="btn-get-outline d-inline-flex align-items-center justify-content-center align-self-center" target="_blank">
-                    <svg width="24px" height="24px" viewBox="0 -1.5 20 20">
-                        <g transform="translate(-260.000000, -7440.000000)" fill="#019256">
-                        <g transform="translate(56.000000, 160.000000)"> 
-                        <path d="M204,7291.33301 L207.334,7297 L213.516,7286.51582 L210.182,7280.84882 
-                        L204,7291.33301 Z M216.755,7290.79427 L223.422,7290.79427 L217.334,7280 L210.667,7280 
-                        L216.755,7290.79427 Z M208.334,7296.68206 L211.667,7291.77557 L224,7291.77557 
-                        L220.667,7296.68206 L208.334,7296.68206 Z"></path></g></g>
-                    </svg>
-                    <i class="bi bi-caret-right-fill"></i>
-                    <span> Acessar o Drive</span>
-                </a>
-            </div>
 
-            <!--
+            
             <div wire:ignore x-data="{ pond: null }" x-init="FilePond.registerPlugin(FilePondPluginImagePreview);
             pond = FilePond.create($refs.input);
             pond.setOptions({
@@ -297,7 +265,7 @@
             }">
                 <input type="file" name="files" x-ref="input">
             </div>
-            -->
+            
 
             <p class="text-sm text-gray-400 inline-flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
@@ -305,12 +273,45 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                 </svg>
-                Se você fizer upload de arquivos novos, pode levar algum tempo para eles aparecerem na lista abaixo.
+                Ao enviar os arquivos no drive, é necessário atualizar a página para eles aparecerem abaixo. 
             </p>
+
+            <div class="text-center text-lg-start">
+                <a href="https://drive.google.com/drive/u/2/folders/{{ $order->google_drive_in_folder_id }}" class="btn-get-outline d-inline-flex align-items-center justify-content-center align-self-center" target="_blank">
+                    <svg width="24px" height="24px" viewBox="0 -1.5 20 20">
+                        <g transform="translate(-260.000000, -7440.000000)" fill="#019256">
+                        <g transform="translate(56.000000, 160.000000)"> 
+                        <path d="M204,7291.33301 L207.334,7297 L213.516,7286.51582 L210.182,7280.84882 
+                        L204,7291.33301 Z M216.755,7290.79427 L223.422,7290.79427 L217.334,7280 L210.667,7280 
+                        L216.755,7290.79427 Z M208.334,7296.68206 L211.667,7291.77557 L224,7291.77557 
+                        L220.667,7296.68206 L208.334,7296.68206 Z"></path></g></g>
+                    </svg>
+                    <i class="bi bi-caret-right-fill"></i>
+                    <span> Acessar o Drive</span>
+                </a>
+            </div>
+
             <iframe id="inFiles"
                 src="https://drive.google.com/embeddedfolderview?id={{ $order->google_drive_in_folder_id }}#list"
                 class="w-full h-64 border-none"></iframe>
         </div>
+
+        @if (!empty($order->google_drive_out_folder_id))
+            <div class="space-y-4">
+                <h4 class="text-md font-semibold text-gray-500 inline-flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block text-gray-300 mr-2" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+                    </svg>
+                    Enviados pela administração.
+                </h4>
+                <iframe
+                    src="https://drive.google.com/embeddedfolderview?id={{ $order->google_drive_out_folder_id }}#list"
+                    class="w-full h-64 border-none"></iframe>
+            </div>
+        @endif
+
     </div>
 </div>
 @section('styles')

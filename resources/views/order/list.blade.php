@@ -24,27 +24,20 @@
         <div class="row">
             <div class="col-12">
                 <table class="d-flex flex-column">
-                    <thead class="d-lg-flex flex-row w-auto d-none">
+                    <thead class="d-lg-flex flex-row w-auto d-none pb-2">
                         <tr class="row w-100">
                             <th class="order-2 order-lg-1 col-12 col-lg-2 col-md-4">Tipo</th>
                             <th class="order-3 order-lg-2 col-12 col-lg-4 col-md-8">Título</th>
-                            <th class="order-1 order-lg-3 col-12 col-lg-2">Situação</th>
-                            <th class="order-4 order-md-4 col-6 col-lg-3 col-md-8">Data</th>
+                            <th class="order-1 order-lg-3 col-12 col-lg-2 ml-5">Situação</th>
+                            <th class="order-4 order-md-4 col-6 col-lg-3 col-md-8 ml-7">Data</th>
                             <th></th>
                         </tr>
                     </thead>                
-                    <tbody class="d-flex flex-column">
+                    <tbody class="d-flex flex-column mb-10">
                         @foreach ($orders as $order)
-                            <tr class="row py-3 border-bottom">
+                            <tr class="row py-3 border-top">
                                 <td class="order-2 order-lg-1 col-12 col-lg-2 col-md-4">
                                     <div class="d-flex flex-sm-column">
-                                        <div class="avatar pr-3 pb-2">
-                                            <div class="w-10 h-10 mask mask-circle bg-{{ @$order->service->category->color }}">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mt-1 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    {!! @$order->service->icon_svg_path !!}
-                                                </svg>
-                                            </div>
-                                        </div>
                                         <div>
                                             <div class="font-bold">{{ @$order->service->name }}</div>
                                             <div class="text-sm opacity-50">{{ @$order->service->category->name }}</div>
@@ -55,14 +48,14 @@
                                     {{ $order->title }}
                                 </td>
                                 <td class="order-1 order-lg-3 col-12 col-lg-2 d-flex justify-content-end justify-content-lg-start pb-1 pl-0 align-items-center">
-                                    <span class="badge badge-outline badge-info badge-md">{{ $order->situation()->text }}</span>
+                                    <span class="badge badge-outline badge-success badge-md">{{ $order->situation()->text }}</span>
                                 </td>
                                 <td class="order-4 order-md-4 col-6 col-lg-3 col-md-8 pt-2  d-lg-flex align-items-lg-start justify-content-lg-center flex-lg-column">
                                     <div>{{ $order->created_at }}</div>
-                                    <div class="text-sm opacity-50">Última atualização: {{ $order->updated_at }}</div>
+                                    <!-- <div class="text-sm opacity-50">Última atualização: {{ $order->updated_at }}</div> -->
                                 </td>
                                 <td class="order-5 order-md-5 col-6 col-lg-1 col-md-4 pt-2 d-flex justify-content-end justify-content-lg-start align-items-end  align-items-lg-start d-lg-flex align-items-lg-center">
-                                    <a href="{{ route('order.show', [$order->id]) }}" class="btn btn-primary">Detalhes</a>
+                                    <a href="{{ route('order.show', [$order->id]) }}" class="btn btn-primary"><i class="bi bi-box-arrow-in-right"></i></a>
                                 </td>
                             </tr>
                         @endforeach

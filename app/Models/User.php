@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Order;
+use App\Models\Pauta;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Illuminate\Notifications\Notifiable;
@@ -144,7 +145,10 @@ class User extends Authenticatable implements JWTSubject
         return $this->hasMany(Order::class, 'admin_id');
     }
 
-
+    public function pautas()
+    {
+        return $this->hasMany(Pauta::class);
+    }
     
     /**
      * Get all of the user's questions

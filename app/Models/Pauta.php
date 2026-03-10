@@ -61,7 +61,7 @@ class Pauta extends Model
             'name' => [
                 'label' => 'Nome',
                 'placeholder' => 'Nome do responsável pela sugestão.',
-                'validation' => 'required|min:5',
+                'validation' => 'required|min:3',
             ],
             'email' => [
                 'label' => 'Email',
@@ -100,9 +100,6 @@ class Pauta extends Model
     /**
      * Get the user associated with the idea.
      */
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
+
 
 }

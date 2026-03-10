@@ -169,13 +169,13 @@
                                     
 
                                     <select class="select">
-                                        <option wire:click="update()">
+                                        <option wire:click="alterName()">
                                             {{ $i_user }}
-                                        </option wire:click="update()">
+                                        </option wire:click="alterName()">
                                         @foreach ($users as $user)
                                             
                                                 @if ($id != $user['id'] && $user['type'] == 'admin')
-                                                <option value="$user['id']">
+                                                <option value="$user['id']" wire:click="alterName()">
                                                     {{ $user['name'] }}
                                                 </option>
                                                 @endif

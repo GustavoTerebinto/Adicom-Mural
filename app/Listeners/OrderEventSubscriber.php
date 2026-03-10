@@ -93,7 +93,7 @@ class OrderEventSubscriber
     public function handleOrderCreated(OrderCreated $event)
     {
         $order = $event->order;
-        $folders = $this->drive->createIssueWorkingFolder($order->id, 'mural');
+        $folders = $this->drive->createIssueWorkingFolder($order->title, '2025' . $order->id);
     
         if($folders == null) {
             Log::error('Não foi possível criar a pasta no Google Drive para pedido: ' . $order->id);
@@ -104,6 +104,7 @@ class OrderEventSubscriber
         $drive_progress_link = isset($folders['progress']) ? $folders['progress']->getWebViewLink() : '';
         $drive_in_link = isset($folders['in']) ? $folders['in']->getWebViewLink() : '';
         $drive_out_link = isset($folders['out']) ? $folders['out']->getWebViewLink() : '';
+        
 
         $order->update([
             'google_drive_folder_link' => $drive_link,

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class PautaController extends Controller
@@ -12,6 +13,10 @@ class PautaController extends Controller
      */
     public function index()
     {
-        return view('pautas');
+        $pautas = auth()->user()->pautas()->get();
+
+        return view('pautas', [
+            'pautas' => $pautas
+        ]);
     }
 }
