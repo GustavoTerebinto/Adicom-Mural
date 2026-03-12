@@ -123,7 +123,7 @@ class GoogleDrive
         return $defaulValue;
     }
 
-    public function createIssueWorkingFolder($number, $repo = 'programa', $addFiles = true)
+    public function createIssueWorkingFolder($number, $repo = 'programa', $addFiles = false)
     {
         if(empty($number)) {
             throw new \InvalidArgumentException('Param $number requires a value.');

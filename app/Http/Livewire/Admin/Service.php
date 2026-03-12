@@ -98,10 +98,7 @@ class Service extends \App\Http\Livewire\Crud\Main
                             $this->poll_view .= '</select>';
                             break;
                         case 'checkbox':
-                            $this->poll_view .= '<select class="py-1 mb-2">';
-                            foreach($question['options'] as $value) { $this->poll_view .= "<option>$value</option>";}
-                            $this->poll_view .= '</select>';
-                            break;
+                            $this->poll_view .= '<input type="'.$type.'" class="py-1 mb-2">'; break;
                     }
                     $this->poll_view .= '<br />';
                 }

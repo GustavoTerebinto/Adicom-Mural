@@ -128,7 +128,7 @@
                 @endadmin
 
                 @if(auth()->user()->type == 'normal')
-
+                    <!--
                     <div class="inline-flex items-center">
                         <img alt="blog" src="../img/mural-icon.png"
                             class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
@@ -145,7 +145,7 @@
                                     
                         </div>
                     </div>
-
+                    -->
                 @endif
             </div>
         </div>
@@ -239,7 +239,7 @@
                 Enviados por você
             </h4>
 
-            
+            <!--
             <div wire:ignore x-data="{ pond: null }" x-init="FilePond.registerPlugin(FilePondPluginImagePreview);
             pond = FilePond.create($refs.input);
             pond.setOptions({
@@ -265,6 +265,7 @@
             }">
                 <input type="file" name="files" x-ref="input">
             </div>
+            -->
             
 
             <p class="text-sm text-gray-400 inline-flex items-center">
@@ -287,7 +288,7 @@
                         L220.667,7296.68206 L208.334,7296.68206 Z"></path></g></g>
                     </svg>
                     <i class="bi bi-caret-right-fill"></i>
-                    <span> Acessar o Drive</span>
+                    <span> Acessar a pasta (Usuário)</span>
                 </a>
             </div>
 
@@ -306,6 +307,22 @@
                     </svg>
                     Enviados pela administração.
                 </h4>
+                @admin
+                    <div class="text-center text-lg-start">
+                        <a href="https://drive.google.com/drive/u/2/folders/{{ $order->google_drive_out_folder_id }}" class="btn-get-outline d-inline-flex align-items-center justify-content-center align-self-center" target="_blank">
+                            <svg width="24px" height="24px" viewBox="0 -1.5 20 20">
+                                <g transform="translate(-260.000000, -7440.000000)" fill="#019256">
+                                <g transform="translate(56.000000, 160.000000)"> 
+                                <path d="M204,7291.33301 L207.334,7297 L213.516,7286.51582 L210.182,7280.84882 
+                                L204,7291.33301 Z M216.755,7290.79427 L223.422,7290.79427 L217.334,7280 L210.667,7280 
+                                L216.755,7290.79427 Z M208.334,7296.68206 L211.667,7291.77557 L224,7291.77557 
+                                L220.667,7296.68206 L208.334,7296.68206 Z"></path></g></g>
+                            </svg>
+                            <i class="bi bi-caret-right-fill"></i>
+                            <span> Acessar a pasta (Administrador)</span>
+                        </a>
+                    </div>
+                @endadmin
                 <iframe
                     src="https://drive.google.com/embeddedfolderview?id={{ $order->google_drive_out_folder_id }}#list"
                     class="w-full h-64 border-none"></iframe>
