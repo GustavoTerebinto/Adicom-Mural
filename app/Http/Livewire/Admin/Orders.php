@@ -167,10 +167,18 @@ class Orders extends Component
         }
     }
 
+    public function alterName($id)
+    {
+        $this->orders->update([
+            $id => $this->admin_id,
+        ]);
+    }
+
     public function render()
     {
         return view('livewire.admin.orders', [
             'orders' => $this->orders,
         ]);
     }
+
 }

@@ -2,8 +2,11 @@
 
 namespace App\Http\Livewire\Order;
 
+use App\Models\Order;
+use App\Models\User;
 use App\Jobs\ProcessGoogleDriveUploads;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Collection;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use App\Services\Github;
@@ -12,7 +15,7 @@ use App\Services\GoogleDrive;
 class Show extends Component
 {
     use WithFileUploads;
-
+    public Collection $users;
     public Model $order;
     public $files = [];
     public $github_issue_link;
@@ -44,10 +47,22 @@ class Show extends Component
         ]);
     }
 
-    public function alterName()
+    public function findAdm($id)
     {
-        $this->order->update([
-            'name' => $this->name,
+        $user = User::where('id', $id)->first();
+
+        if (!$user) {
+            $user = User ::where('id', 1)->first();
+            return $user->name;
+        }
+        
+        return $user->name;
+    }
+
+    public function alterName($id)
+    {
+        $this->orders->update([
+            $id => $this->admin_id,
         ]);
     }
 

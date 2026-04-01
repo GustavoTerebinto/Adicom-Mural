@@ -155,8 +155,6 @@ class Order extends Model
         return $user->name;
     }
 
-  
-
     /**
      * Get all of the post's comments.
      */

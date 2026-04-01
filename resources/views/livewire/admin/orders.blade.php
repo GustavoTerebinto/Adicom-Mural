@@ -163,19 +163,19 @@
 
                                     <?php 
                                         $id = $order['admin_id'];
-                                        $i_user = $order->findAdm($id); 
+                                        $i_user = $order->findAdm($id);
                                     ?>
 
                                     
 
                                     <select class="select">
-                                        <option wire:click="alterName()">
+                                        <option>
                                             {{ $i_user }}
-                                        </option wire:click="alterName()">
+                                        </option>
                                         @foreach ($users as $user)
                                             
                                                 @if ($id != $user['id'] && $user['type'] == 'admin')
-                                                <option value="$user['id']" wire:click="alterName()">
+                                                <option value="$user['id']">
                                                     {{ $user['name'] }}
                                                 </option>
                                                 @endif

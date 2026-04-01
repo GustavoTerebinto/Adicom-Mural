@@ -93,14 +93,6 @@
                                         </div>
                                     </div>
                                     <div class="w-full md:w-full flex items-start md:w-full px-3">
-                                        <div class="flex items-start w-1/2 text-gray-700 px-2 mr-auto">
-                                            <p class="text-xs md:text-sm pt-px text-gray-400">
-                                                <i class="bi bi-info-circle"></i>
-                                                Você pode usar <a
-                                                    href="https://docs.github.com/pt/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax"
-                                                    target="_blank" class="underline">markdown</a> para formatação.
-                                            </p>
-                                        </div>
                                         <div class="-mr-1">
                                             <button onclick="confirm_update({{ $comment['id'] }})"
                                                 class="btn btn-primary">Salvar</button>
@@ -154,14 +146,6 @@
                             </div>
                         </div>
                         <div class="w-full md:w-full flex items-start md:w-full px-3">
-                            <div class="flex items-start w-1/2 text-gray-700 px-2 mr-auto">
-                                <p class="text-xs md:text-sm pt-px text-gray-400">
-                                    <i class="bi bi-info-circle"></i>
-                                    Você pode usar <a
-                                        href="https://docs.github.com/pt/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax"
-                                        target="_blank" class="underline">markdown</a> para formatação.
-                                </p>
-                            </div>
                             <div class="-mr-1">
                                 <button wire:click="store()" class="btn btn-primary">Comentar</button>
                             </div>

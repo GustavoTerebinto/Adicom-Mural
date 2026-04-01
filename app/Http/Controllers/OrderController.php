@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\User;
 use App\Models\Service;
 use Illuminate\Http\Request;
 
@@ -21,7 +22,7 @@ class OrderController extends Controller
                                 ->get();
 
         return view('order.list', [
-            'orders' => $orders
+            'orders' => $orders,
         ]);
     }
 
@@ -51,9 +52,11 @@ class OrderController extends Controller
             'comments',
             'comments.user'
         ]);
+        //$users = User::users()->get();
 
         return view('order.show', [
             'order' => $order
+            //'users' => $users,
         ]);
     }    
 }
