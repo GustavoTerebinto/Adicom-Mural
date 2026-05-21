@@ -20,19 +20,13 @@
                 <div class="leading-relaxed mb-8">{!! nl2br(Str::markdown($order->description)) !!}</div>
                 @if ($order->data)
                     <div class="text-sm py-4 w-100">
-                        <p class="font-medium py-2">Informações adicionais</p>
+                        <p class="font-medium py- fw-bold">Informações adicionais</p>
                         <table class="w-100">
-                            <thead class="d-xl-block d-none">
-                                <tr class="row t-row mw-100">
-                                    <th class="col-xl-5">Pergunta</th>
-                                    <th class="col-xl-7">Resposta</th>
-                                </tr>
-                            </thead>
                             <tbody>
                                 @foreach ($order->data['fields'] as $field)
                                     <tr class="row mw-100 py-2 t-row" style="">
                                         <td class="text-wrap py-1 bold col-12 col-xl-5">{!! preg_replace('/\[(.+)\]\s*\((.+)\)/', '<a class="link-primary underline" href="$2">$1</a>', $field['text']) !!}</td>
-                                        <td class="text-wrap col-12 col-xl-7">
+                                        <td class="text-wrap col-12 col-xl-7 fst-italic">
                                             <i class="bi bi-chevron-compact-right d-xl-none"></i>
                                             @if ($field['type'] == 'select')
                                                 {{ $field['options'][$field['answer']] }}
@@ -128,13 +122,12 @@
                 @endadmin
 
                 @if(auth()->user()->type == 'normal')
-                    <!--
                     <div class="inline-flex items-center">
-                        <img alt="blog" src="../img/mural-icon.png"
+                        <img alt="blog" src="../img/uffs-logo.png"
                             class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
                         <div class="flex-grow flex flex-col pl-4">
-                            <span class="title-font font-medium text-gray-900">Entrar em contato com a equipe do PRACTICE</span>
-                            <a href="https://wa.me/554236350038?text=Olá,%20gostaria%20de%20tirar%20algumas%20dúvidas%20sobre%20o%20serviço:%20{{$site_url}}"
+                            <span class="title-font font-medium text-gray-900">Entrar em contato com a equipe do ADICOM</span>
+                            <a href="https://wa.me/{{ $order->wpp_number }}?text=Olá,%20gostaria%20de%20tirar%20algumas%20dúvidas%20sobre%20o%20serviço:%20{{$site_url}}"
                                     target="_blank" rel="external" style='text-decoration:none'>
                                 <span><i class="bi bi-whatsapp" style="float-left"></i> Chamar pelo WhatsApp</span>
                             </a>
@@ -145,13 +138,12 @@
                                     
                         </div>
                     </div>
-                    -->
                 @endif
             </div>
         </div>
     </div>
 
-    @admin
+    @if(auth()->user()->type == 'mod' || auth()->user()->type == 'admin')
         <div class="mb-4 w-full">
             <div class="flex items-center flex-wrap border-gray-100 mt-auto w-full">
                 <h3 class="pb-3 mb-1 text-lg font-semibold text-gray-700 inline-flex items-center w-full">
@@ -165,8 +157,8 @@
                     <div>
                         Gerenciamento interno
                     </div>
-                    <!--Botão para trocar o admin_id da ordem de serviço 
-                    <button wire:click="alterAdmin()" class="btn btn-primary w-30 mb-2 ml-2">Assumir Solicitação</button> -->
+                    <!--Botão para trocar o admin_id da ordem de serviço -->
+                    <button wire:click="alterAdmin()" class="btn btn-primary w-30 mb-2 ml-2">Assumir Solicitação</button>
 
                     <?php 
                         $id = $order['admin_id'];
@@ -183,6 +175,7 @@
                 </h3>
             </div>
 
+            @admin
             <div class="form-control mb-4 pb-4">
 
                 <label for="status" class="label">
@@ -202,7 +195,7 @@
                 @enderror
 
                 
-                <label for="urgency" class="label">ewire('order.
+                <label for="urgency" class="label">
                     <span class="label-text">Urgência desse pedido</span>
                 </label>
                 <select wire:model="urgency" name="urgency"
@@ -221,9 +214,10 @@
                 
 
             </div>
+            @endadmin
         </div>
         
-    @endadmin
+    @endif
 
     <div class="mb-4 w-full">
         <h3
@@ -312,9 +306,9 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
                     </svg>
-                    Enviados pela administração.
+                    Enviados pelo ADICOM.
                 </h4>
-                @admin
+                @if(auth()->user()->type == 'mod' || auth()->user()->type == 'admin')
                     <div class="text-center text-lg-start">
                         <a href="https://drive.google.com/drive/u/2/folders/{{ $order->google_drive_out_folder_id }}" class="btn-get-outline d-inline-flex align-items-center justify-content-center align-self-center" target="_blank">
                             <svg width="24px" height="24px" viewBox="0 -1.5 20 20">
@@ -326,10 +320,10 @@
                                 L220.667,7296.68206 L208.334,7296.68206 Z"></path></g></g>
                             </svg>
                             <i class="bi bi-caret-right-fill"></i>
-                            <span> Acessar a pasta (Administrador)</span>
+                            <span> Acessar a pasta (Admin/Moder)</span>
                         </a>
                     </div>
-                @endadmin
+                @endif
                 <iframe
                     src="https://drive.google.com/embeddedfolderview?id={{ $order->google_drive_out_folder_id }}#list"
                     class="w-full h-64 border-none"></iframe>

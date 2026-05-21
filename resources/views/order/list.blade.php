@@ -38,6 +38,13 @@
                             <tr class="row py-3 border-top">
                                 <td class="order-2 order-lg-1 col-12 col-lg-2 col-md-4">
                                     <div class="d-flex flex-sm-column">
+                                        <div class="avatar pr-3 pb-2">
+                                            <div class="w-10 h-10 mask mask-circle bg-{{ @$order->service->category->color }}">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mt-1 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    {!! @$order->service->icon_svg_path !!}
+                                                </svg>
+                                            </div>
+                                        </div>
                                         <div>
                                             <div class="font-bold">{{ @$order->service->name }}</div>
                                             <div class="text-sm opacity-50">{{ @$order->service->category->name }}</div>

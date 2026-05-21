@@ -93,7 +93,7 @@ class OrderEventSubscriber
     public function handleOrderCreated(OrderCreated $event)
     {
         $order = $event->order;
-        $folders = $this->drive->createIssueWorkingFolder($order->title, $order->id);
+        $folders = $this->drive->createIssueWorkingFolder($order->id, $order->title);
     
         if($folders == null) {
             Log::error('Não foi possível criar a pasta no Google Drive para pedido: ' . $order->id);

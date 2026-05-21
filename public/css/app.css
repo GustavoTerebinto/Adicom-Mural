@@ -2043,7 +2043,7 @@ html {
   height: 3rem;
   font-size: .875rem;
   line-height: 1.25rem;
-  line-height: 1em;
+  line-height: 1.5em;
   padding-left: 1rem;
   padding-right: 1rem;
   min-height: 3rem;
@@ -3688,18 +3688,19 @@ html {
 
 .btn-accent {
   --tw-bg-opacity: 1;
-  background-color: hsla(var(--a) / var(--tw-bg-opacity, 1));
+  background-color:rgb(60, 160, 110);
   --tw-border-opacity: 1;
-  border-color: hsla(var(--a) / var(--tw-border-opacity, 1));
+  border-color: rgb(60, 160, 110);
   --tw-text-opacity: 1;
   color: hsla(var(--ac) / var(--tw-text-opacity, 1));
 }
 
 .btn-accent.btn-active,.btn-accent:hover {
   --tw-bg-opacity: 1;
-  background-color: hsla(var(--af) / var(--tw-bg-opacity, 1));
+  background-color:rgb(41, 110, 87);
   --tw-border-opacity: 1;
-  border-color: hsla(var(--af) / var(--tw-border-opacity, 1));
+  border-color: rgb(41, 110, 87);
+  color:white;
 }
 
 .btn-accent:focus-visible {
@@ -6630,10 +6631,10 @@ border-color: rgba(255, 255, 255, 0);
 .badge-info {
   --tw-bg-opacity: 1;
   --tw-bg-opacity: 0.1;
-  background-color: hsla(var(--in) / var(--tw-bg-opacity, 1));
+  background-color:#23df90;
   border-color: transparent;
   --tw-text-opacity: 1;
-  color: hsla(var(--in) / var(--tw-text-opacity, 1));
+  color:#16634d;
 }
 
 .badge-success {

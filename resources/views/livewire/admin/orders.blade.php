@@ -112,6 +112,39 @@
 
 
     <div class="row col-12">
+        
+        <div class="container text-center pb-3">
+            <div class="row">
+                <div class="col">
+                    <a class="btn btn-danger" wire:click="$set('filter', {service_id: null, location_id: null})">Limpar</a>
+                </div>
+                <div class="col">
+                    <a class="btn btn-accent" href="http://172.20.66.109:8080/gerenciar/fila">Minha Fila</a>
+                </div>
+                <div class="col">
+                    <a class="btn btn-primary">DCVisual</a>
+                </div>
+                <div class="col">
+                    <a class="btn btn-primary">Diretoria</a>
+                </div>
+                <div class="col">
+                    <a class="btn btn-primary" wire:click="$set('filter', {service_id: 48, location_id: 2})">Impressão Interna - CH</a>
+                </div>
+                <div class="col">
+                    <a class="btn btn-primary" wire:click="$set('filter', {service_id: 48, location_id: 1})">Impressão Interna - CL</a>
+                </div>
+                <div class="col">
+                    <a class="btn btn-primary" wire:click="$set('filter', {service_id: 48, location_id: 3})">Impressão Interna - ER</a>
+                </div>
+                <div class="col">
+                    <a class="btn btn-primary" wire:click="$set('filter', {service_id: 48, location_id: 4})">Impressão Interna - LS</a>
+                </div>
+                <div class="col">
+                    <a class="btn btn-primary" wire:click="$set('filter', {service_id: 48, location_id: 6})">Impressão Interna - RE</a>
+                </div>
+            </div>
+        </div>
+
         <div class="table-responsive">
             <table class="table">
                 <thead>
@@ -143,7 +176,7 @@
                 <tbody>
                     @forelse ($orders as $order)
                         <tr>
-                        <td class="text-wrap">
+                            <td class="text-wrap">
                                 <div class="flex items-center space-x-3">
                                     <div>
                                         <div class="font-bold">{{ $order['title'] }}</div>

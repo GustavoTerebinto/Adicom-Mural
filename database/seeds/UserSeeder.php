@@ -13,11 +13,11 @@ class UserSeeder extends Seeder
     public function run()
     {
         User::create([
-            'name' => 'Equipe Practice',
-            'email' => 'practice@uffs.edu.br',
+            'name' => 'Equipe ADICOM',
+            'email' => 'adicom@uffs.edu.br',
             'password' => 'dd',
-            'username' => 'practice',
-            'uid' => 'practice',
+            'username' => 'adicom',
+            'uid' => 'adicom',
             'cpf' => '000',
             'type' => User::NORMAL
         ]);
