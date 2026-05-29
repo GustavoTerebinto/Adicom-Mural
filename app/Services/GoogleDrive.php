@@ -136,7 +136,7 @@ class GoogleDrive
             return $this->getIssueWorkingFolderStructureByName($name);
         }
 
-        $tasks_folder_id = $this->config('1xY9x1sqMAzQFW0sY1YuUbzZwS0e3I0rN', '');
+        $tasks_folder_id = $this->config('parent_folder_id', '1xY9x1sqMAzQFW0sY1YuUbzZwS0e3I0rN');
         
         $folder = $this->createFolder($name, $tasks_folder_id);
         $progress_folder = $this->createFolder('Em andamento', $folder->getId(), true);
