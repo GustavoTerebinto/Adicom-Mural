@@ -5,12 +5,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                    <img src="{{ asset('img/undraw.co/select_option.svg') }}" class="w-75 h-auto mx-auto img-fluid" alt="">
+                    <img src="{{ asset('img/undraw.co/selection.png') }}" class="w-75 h-auto mx-auto img-fluid" alt="">
                 </div>
                 <div class="col-lg-8 d-flex flex-column justify-content-center">
                     <h1 data-aos="fade-up">Serviços disponíveis</h1>
-                    <h2 data-aos="fade-up" data-aos-delay="400">Temos uma carga variada de serviços. O que podemos fazer por
-                        você?</h2>
+                    <h2 data-aos="fade-up" data-aos-delay="400">Escolha um serviço para fazer a solicitação</h2>
                 </div>
             </div>
         </div>
@@ -22,19 +21,6 @@
                 <a href="javascript:void(0)" class="font-semibold nav-link"
                     :class="{ 'btn btn-primary btn-outline rounded-full': active === 'all' }"
                     @click.prevent="active = 'all'">Todos</a>
-            </li>
-            <li class="nav-item">
-                <a href="javascript:void(0)" class="font-semibold nav-link"
-                    :class="{ 'btn btn-primary btn-outline rounded-full': active === 'popular' }"
-                    @click.prevent="active = 'popular'">
-                    Populares
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1 text-purple-700 animate-pulse inline-block"
-                        viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd"
-                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </a>
             </li>
             @foreach ($categories as $category)
                 <li class="nav-item d-flex">

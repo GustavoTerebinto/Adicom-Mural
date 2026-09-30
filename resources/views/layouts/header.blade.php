@@ -9,7 +9,7 @@
         <nav id="navbar" class="navbar oculto">
             <ul>
                 @auth
-                    @if(auth()->user()->type == 'mod' || auth()->user()->type == 'admin')
+                    @if(auth()->user()->type == 'mod' || auth()->user()->type == 'admin' || auth()->user()->type == 'admin-master')
                         <li class="dropdown ml-3">
                             @if(auth()->user()->type == 'mod')
                                 <div tabindex="0" class="btn btn-primary btn-outline" data-bs-toggle="dropdown"
@@ -43,10 +43,12 @@
                                     <li class="dropdown-item"><a class="nav-link"
                                             href="{{ route('admin.relation') }}">Relações</a>
                                     </li>
+                                @endadmin
+                                @if(auth()->user()->type == 'admin-master')
                                     <li class="dropdown-item"><a class="nav-link"
                                             href="{{ route('admin.user') }}">Usuários</a>
                                     </li>
-                                @endadmin
+                                @endif
                             </ul>
                         </li>
                     @endif

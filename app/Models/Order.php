@@ -121,14 +121,14 @@ class Order extends Model
                 'placeholder' => '',
                 'show' => 'create,edit'
             ],
-            /** 'requested_due_date' => [
-            *    'type' => 'date',
-            *    'label' => 'Prazo de entrega sugerido',
-            *    'help' => 'Quando você gostaria de ter um primeiro material para revisão. Esse tempo deve considerar alguns dias para que nossa equipe possa fazer a análise do pedido. Além disso, essa data é sugestiva e não há garantias que ela será atendida.',
-            *    'attr' => 'min=' . NOW_PLUS_FEW_DAYS . ' ',
-            *    'validation' => 'after:' . NOW_PLUS_FEW_DAYS_VALIDATION . ' '
-            * ],
-            */
+            'requested_due_date' => [
+                'type' => 'date',
+                'label' => 'Prazo de entrega sugerido',
+                'help' => 'Quando você gostaria de ter um primeiro material para revisão. Esse tempo deve considerar alguns dias para que nossa equipe possa fazer a análise do pedido. Além disso, essa data é sugestiva e não há garantias que ela será atendida.',
+                'attr' => 'min=' . NOW_PLUS_FEW_DAYS . ' ',
+                'validation' => 'after:' . NOW_PLUS_FEW_DAYS_VALIDATION . ' '
+            ],
+            
         ]
     ];
 

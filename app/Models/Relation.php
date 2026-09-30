@@ -38,12 +38,12 @@ class Relation extends Model
         'fields' => [
             'name' => [
                 'label' => 'Nome',
-                'placeholder' => 'Ex.: Campus Chapecó',
+                'placeholder' => 'Ex.: Professor',
                 'validation' => 'required|min:5',
             ],
             'description' => [
                 'label' => 'Descrição',
-                'placeholder' => 'Ex.: uma breve descrição desse local',
+                'placeholder' => 'Ex.: uma breve descrição',
                 'show' => 'create,edit'
             ],
             'is_active' => [
@@ -53,7 +53,7 @@ class Relation extends Model
                     'Ativo',
                 ],
                 'label' => 'Ativo',
-                'placeholder' => 'Se esse local deve aparecer em nossos formulários.',
+                'placeholder' => 'Se essa relação deve aparecer nos formulários.',
             ],            
         ]
     ];

@@ -6,7 +6,8 @@
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <meta name="csrf-token" content="{{ csrf_token()}}">
           <script>window.Laravel = {csrfToken:'{{ csrf_token() }}'}</script>
-          <title>Mural - PRACTICE</title>
+          <title>ADICOM - Atendimento DICOM</title>
+          <link rel="icon" type="image/x-icon" href="img/uffs-logo.png">
         
           <meta content="" name="description">
           <meta content="" name="keywords">

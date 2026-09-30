@@ -100,7 +100,8 @@
                 @case('date')
                     <label for="{{ $key }}" class="label">
                         <span class="label-text">{{ $field['label'] }}
-                            <a href="https://practice.uffs.edu.br/servico/prazos-de-solicitacao/" target="_blank" rel="external" class="text-red-400">(Ver tabela de prazos)</a>
+                            <!-- Adicionar nova tabela de prazos -->
+                            <!-- <a href="https://practice.uffs.edu.br/servico/prazos-de-solicitacao/" target="_blank" rel="external" class="text-red-400">(Ver tabela de prazos)</a> -->
                             <span class="text-red-600 inline-block" title="Obrigatório">{{ $required }}</span>
                         </span>
                         @if (isset($field['help'])) <i class="text-gray-400 bi bi-info-circle" title="{{ $field['help'] }}"></i> @endif

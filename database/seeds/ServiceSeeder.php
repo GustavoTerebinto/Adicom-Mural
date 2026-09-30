@@ -39,7 +39,7 @@ class ServiceSeeder extends Seeder
         Service::create([
             #'img_url' => '',
             'name' => 'Impressão externa - Lona',
-            'description' => '*Adicionar descrição',
+            'description' => 'Impressão em formato maior',
             'work_days' => 7,
             'eval_days' => 7,
             'category_id' => 2,
