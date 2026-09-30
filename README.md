@@ -38,6 +38,7 @@ cd Adicom-Mural
 Instale as dependências do PHP usando o comando abaixo:
 
 ```
+composer update
 composer install
 ```
 
@@ -89,12 +90,6 @@ Rode os seeders (que crias as categorias/serviços padrão):
 
 ```
 php artisan db:seed
-```
-
-Gere os recursos JavaScript e CSS:
-
-```
-npm run dev
 ```
 
 >*DICA:* enquanto estiver desenvolvendo, rode `npm run watch` para manter os scripts javascript sendo gerados sob demanda quando alterados.
