@@ -29,8 +29,8 @@ sudo apt install php8.0-cli php8.0-mbstring php8.0-zip php8.0-xml php8.0-curl ph
 Clonar o repositório:
 
 ```
-git clone --recurse-submodules https://github.com/practice-uffs/mural
-cd mural
+git clone --recurse-submodules https://github.com/GustavoTerebinto/Adicom-Mural
+cd Adicom-Mural
 ```
 
 #### 2.1 PHP
